@@ -68,9 +68,9 @@ const HeroSection = () => {
           <div className="flex items-baseline justify-center gap-2 flex-wrap">
             <span>L'assistante</span>
             <span className="relative inline-block h-[1.2em] overflow-hidden">
-              <span className="absolute inset-0 bg-gradient-to-r from-[#d8246e]/20 to-[#d8246e]/10 rounded-sm"></span>
+              <span className="absolute inset-0 bg-gradient-to-r from-[#d8246e]/20 to-[#d8246e]/10 rounded-sm px-1"></span>
               <span 
-                className={`relative block transition-all duration-400 ease-in-out ${
+                className={`relative block transition-all duration-400 ease-in-out px-1 ${
                   wordVisible 
                     ? 'opacity-100 translate-y-0 blur-0' 
                     : 'opacity-0 translate-y-6 blur-sm'
