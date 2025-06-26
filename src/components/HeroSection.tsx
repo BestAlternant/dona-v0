@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 // import TaskBoard from './TaskBoard';
@@ -17,9 +16,6 @@ const HeroSection = () => {
 
   return (
     <section className="relative w-full py-12 md:py-20 px-6 md:px-12 flex flex-col items-center justify-center overflow-hidden bg-background min-h-screen">
-      {/* Cosmic particle effect (background dots) - Extended to cover full section */}
-      <div className="absolute inset-0 top-0 cosmic-grid opacity-30"></div>
-      
       {/* Gradient glow effect */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full">
         <div className="w-full h-full opacity-10 bg-primary blur-[120px]"></div>
@@ -57,8 +53,7 @@ const HeroSection = () => {
       </div>
       
       {/* Task Manager UI integrated in hero section with glassmorphic effect - HIDDEN */}
-      {/*
-      <div className={`w-full max-w-7xl mt-12 z-10 transition-all duration-1000 delay-500 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'}`}>
+      {/* <div className={`w-full max-w-7xl mt-12 z-10 transition-all duration-1000 delay-500 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'}`}>
         <div className="cosmic-glow relative rounded-xl overflow-hidden border border-border backdrop-blur-sm bg-card shadow-lg">
           <div className="bg-card backdrop-blur-md w-full">
             <div className="flex items-center justify-between p-4 border-b border-border">
@@ -159,8 +154,7 @@ const HeroSection = () => {
             </div>
           </div>
         </div>
-      </div>
-      */}
+      </div> */}
     </section>
   );
 };

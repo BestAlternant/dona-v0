@@ -10,16 +10,21 @@ import Footer from '@/components/Footer';
 
 const Index = () => {
   return (
-    <div className="min-h-screen flex flex-col bg-background text-foreground">
-      <Header />
-      <main>
-        <HeroSection />
-        {/* <DashboardPreview /> */}
-        <Features />
-        <Testimonials />
-        <Pricing />
-      </main>
-      <Footer />
+    <div className="min-h-screen flex flex-col bg-background text-foreground relative overflow-hidden">
+      {/* Global cosmic grid background */}
+      <div className="fixed inset-0 cosmic-grid opacity-30 pointer-events-none"></div>
+      
+      <div className="relative z-10">
+        <Header />
+        <main>
+          <HeroSection />
+          {/* <DashboardPreview /> */}
+          <Features />
+          <Testimonials />
+          <Pricing />
+        </main>
+        <Footer />
+      </div>
     </div>
   );
 };
