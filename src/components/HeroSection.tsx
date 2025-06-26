@@ -65,19 +65,20 @@ const HeroSection = () => {
         </div>
         
         <h1 className={`text-4xl md:text-6xl lg:text-7xl font-medium tracking-tighter text-balance text-foreground transition-all duration-700 transform ${titleVisible ? 'opacity-100 translate-y-0 blur-0' : 'opacity-0 -translate-y-4 blur-sm'}`}>
-          L'assistante <span className="relative inline-block overflow-hidden h-[1.2em] align-baseline">
-            <span className="relative bg-gradient-to-r from-[#d8246e]/20 to-[#d8246e]/10 rounded-sm px-1 -mx-1">
-              <span 
-                className={`relative z-10 inline-block transition-all duration-300 ${
-                  wordVisible 
-                    ? 'transform translate-y-0 opacity-100' 
-                    : 'transform translate-y-full opacity-0'
-                }`}
-              >
-                {words[currentWordIndex]}
-              </span>
+          <span className="inline-block">L'assistante</span>{' '}
+          <span className="relative inline-block overflow-hidden h-[1.2em] align-top" style={{ verticalAlign: 'baseline' }}>
+            <span className="absolute inset-0 bg-gradient-to-r from-[#d8246e]/20 to-[#d8246e]/10 rounded-sm top-[0.8em] h-[0.4em]"></span>
+            <span 
+              className={`relative z-10 inline-block transition-all duration-300 ${
+                wordVisible 
+                  ? 'transform translate-y-0 opacity-100' 
+                  : 'transform translate-y-full opacity-0'
+              }`}
+            >
+              {words[currentWordIndex]}
             </span>
-          </span><br className="hidden md:inline" /> des <span className="text-primary">fondateurs ambitieux</span>
+          </span>
+          <br className="hidden md:inline" /> des <span className="text-primary">fondateurs ambitieux</span>
         </h1>
         
         <p className={`text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto text-balance transition-all duration-700 transform ${descriptionVisible ? 'opacity-100 translate-y-0 blur-0' : 'opacity-0 -translate-y-4 blur-sm'}`}>
