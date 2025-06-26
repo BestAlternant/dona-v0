@@ -16,9 +16,9 @@ const HeroSection = () => {
   }, []);
 
   return (
-    <section className="relative w-full py-12 md:py-20 px-6 md:px-12 flex flex-col items-center justify-center overflow-hidden bg-background">
-      {/* Cosmic particle effect (background dots) */}
-      <div className="absolute inset-0 cosmic-grid opacity-30"></div>
+    <section className="relative w-full py-12 md:py-20 px-6 md:px-12 flex flex-col items-center justify-center overflow-hidden bg-background min-h-screen">
+      {/* Cosmic particle effect (background dots) - Extended to cover full section */}
+      <div className="absolute inset-0 top-0 cosmic-grid opacity-30"></div>
       
       {/* Gradient glow effect */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full">
