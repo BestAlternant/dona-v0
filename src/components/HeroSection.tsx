@@ -5,14 +5,22 @@ import { Button } from '@/components/ui/button';
 import { Loader } from 'lucide-react';
 
 const HeroSection = () => {
-  const [isVisible, setIsVisible] = useState(false);
+  const [badgeVisible, setBadgeVisible] = useState(false);
+  const [titleVisible, setTitleVisible] = useState(false);
+  const [descriptionVisible, setDescriptionVisible] = useState(false);
+  const [buttonVisible, setButtonVisible] = useState(false);
+  const [trialTextVisible, setTrialTextVisible] = useState(false);
 
   useEffect(() => {
-    const timer = setTimeout(() => {
-      setIsVisible(true);
-    }, 300);
+    const timers = [
+      setTimeout(() => setBadgeVisible(true), 200),
+      setTimeout(() => setTitleVisible(true), 400),
+      setTimeout(() => setDescriptionVisible(true), 600),
+      setTimeout(() => setButtonVisible(true), 800),
+      setTimeout(() => setTrialTextVisible(true), 1000),
+    ];
 
-    return () => clearTimeout(timer);
+    return () => timers.forEach(timer => clearTimeout(timer));
   }, []);
 
   return (
@@ -28,8 +36,8 @@ const HeroSection = () => {
       {/* White gradient fade at bottom */}
       <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background to-transparent z-20"></div>
       
-      <div className={`relative z-10 max-w-4xl text-center space-y-6 transition-all duration-700 transform ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-        <div className="flex justify-center">
+      <div className="relative z-10 max-w-4xl text-center space-y-6">
+        <div className={`flex justify-center transition-all duration-700 transform ${badgeVisible ? 'opacity-100 translate-y-0 blur-0' : 'opacity-0 -translate-y-4 blur-sm'}`}>
           <a 
             href="https://lumena.tech/" 
             target="_blank" 
@@ -41,24 +49,24 @@ const HeroSection = () => {
           </a>
         </div>
         
-        <h1 className="text-4xl md:text-6xl lg:text-7xl font-medium tracking-tighter text-balance text-foreground">
+        <h1 className={`text-4xl md:text-6xl lg:text-7xl font-medium tracking-tighter text-balance text-foreground transition-all duration-700 transform ${titleVisible ? 'opacity-100 translate-y-0 blur-0' : 'opacity-0 -translate-y-4 blur-sm'}`}>
           L'assistante <span className="relative inline-block">
             <span className="relative z-10">administrative</span>
             <span className="absolute -inset-x-1 inset-y-0 bg-gradient-to-r from-[#d8246e]/20 to-[#d8246e]/10 rounded-sm -z-10"></span>
           </span> des <span className="text-primary">fondateurs ambitieux</span>
         </h1>
         
-        <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto text-balance">
+        <p className={`text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto text-balance transition-all duration-700 transform ${descriptionVisible ? 'opacity-100 translate-y-0 blur-0' : 'opacity-0 -translate-y-4 blur-sm'}`}>
           Un service tout-en-un qui centralise votre gestion administrative, RH et comptable via une assistante virtuelles externalisés.
         </p>
         
-        <div className="flex justify-center pt-6">
+        <div className={`flex justify-center pt-6 transition-all duration-700 transform ${buttonVisible ? 'opacity-100 translate-y-0 blur-0' : 'opacity-0 -translate-y-4 blur-sm'}`}>
           <Button className="bg-primary text-primary-foreground hover:bg-primary/80 hover:text-primary-foreground text-base h-12 px-8 transition-all duration-200 min-h-[48px]">
             Prendre un rendez-vous
           </Button>
         </div>
         
-        <div className="pt-6 text-sm text-muted-foreground">
+        <div className={`pt-6 text-sm text-muted-foreground transition-all duration-700 transform ${trialTextVisible ? 'opacity-100 translate-y-0 blur-0' : 'opacity-0 -translate-y-4 blur-sm'}`}>
           No credit card required • Free 14-day trial
         </div>
       </div>

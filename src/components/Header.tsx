@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import Logo from './Logo';
@@ -10,6 +11,7 @@ const Header = () => {
   const [activePage, setActivePage] = useState('features');
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [isDarkMode, setIsDarkMode] = useState(false);
+  const [isVisible, setIsVisible] = useState(false);
   
   useEffect(() => {
     if (isDarkMode) {
@@ -20,6 +22,14 @@ const Header = () => {
       document.documentElement.classList.add('light-mode');
     }
   }, [isDarkMode]);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsVisible(true);
+    }, 100);
+
+    return () => clearTimeout(timer);
+  }, []);
   
   const handleNavClick = (page: string) => (e: React.MouseEvent) => {
     e.preventDefault();
@@ -41,7 +51,7 @@ const Header = () => {
 
   return (
     <div className="fixed top-0 left-0 right-0 z-50 pt-8 px-4">
-      <header className="w-full max-w-7xl mx-auto py-3 px-6 md:px-8 flex items-center justify-between">
+      <header className={`w-full max-w-7xl mx-auto py-3 px-6 md:px-8 flex items-center justify-between transition-all duration-700 transform ${isVisible ? 'opacity-100 translate-y-0 blur-0' : 'opacity-0 -translate-y-4 blur-sm'}`}>
         <div className="p-3">
           <Logo />
         </div>
