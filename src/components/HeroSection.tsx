@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 // import TaskBoard from './TaskBoard';
@@ -43,7 +44,7 @@ const HeroSection = () => {
         <h1 className="text-4xl md:text-6xl lg:text-7xl font-medium tracking-tighter text-balance text-foreground">
           L'assistante <span className="relative inline-block">
             <span className="relative z-10">administrative</span>
-            <span className="absolute inset-0 bg-gradient-to-r from-[#d8246e]/20 to-[#d8246e]/10 rounded-sm -z-10"></span>
+            <span className="absolute -inset-x-1 inset-y-0 bg-gradient-to-r from-[#d8246e]/20 to-[#d8246e]/10 rounded-sm -z-10"></span>
           </span> des <span className="text-primary">fondateurs ambitieux</span>
         </h1>
         
