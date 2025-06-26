@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 // import TaskBoard from './TaskBoard';
@@ -9,6 +10,10 @@ const HeroSection = () => {
   const [descriptionVisible, setDescriptionVisible] = useState(false);
   const [buttonVisible, setButtonVisible] = useState(false);
   const [trialTextVisible, setTrialTextVisible] = useState(false);
+  const [currentWordIndex, setCurrentWordIndex] = useState(0);
+  const [wordVisible, setWordVisible] = useState(true);
+
+  const words = ['administrative', 'RH', 'comptable'];
 
   useEffect(() => {
     const timers = [
@@ -20,6 +25,18 @@ const HeroSection = () => {
     ];
 
     return () => timers.forEach(timer => clearTimeout(timer));
+  }, []);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setWordVisible(false);
+      setTimeout(() => {
+        setCurrentWordIndex((prev) => (prev + 1) % words.length);
+        setWordVisible(true);
+      }, 300);
+    }, 2500);
+
+    return () => clearInterval(interval);
   }, []);
 
   return (
@@ -49,9 +66,18 @@ const HeroSection = () => {
         </div>
         
         <h1 className={`text-4xl md:text-6xl lg:text-7xl font-medium tracking-tighter text-balance text-foreground transition-all duration-700 transform ${titleVisible ? 'opacity-100 translate-y-0 blur-0' : 'opacity-0 -translate-y-4 blur-sm'}`}>
-          L'assistante <span className="relative inline-block">
-            <span className="relative z-10">administrative</span>
-            <span className="absolute -inset-x-1 inset-y-0 bg-gradient-to-r from-[#d8246e]/20 to-[#d8246e]/10 rounded-sm -z-10"></span>
+          L'assistante <span className="relative inline-block overflow-hidden">
+            <span className="relative bg-gradient-to-r from-[#d8246e]/20 to-[#d8246e]/10 rounded-sm px-1 -mx-1">
+              <span 
+                className={`relative z-10 inline-block transition-all duration-300 ${
+                  wordVisible 
+                    ? 'transform translate-y-0 opacity-100' 
+                    : 'transform translate-y-full opacity-0'
+                }`}
+              >
+                {words[currentWordIndex]}
+              </span>
+            </span>
           </span> des <span className="text-primary">fondateurs ambitieux</span>
         </h1>
         
