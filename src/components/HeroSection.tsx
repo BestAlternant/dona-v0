@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 // import TaskBoard from './TaskBoard';
@@ -91,7 +90,7 @@ const HeroSection = () => {
         <div className={`flex justify-center pt-6 transition-all duration-700 transform ${buttonVisible ? 'opacity-100 translate-y-0 blur-0' : 'opacity-0 -translate-y-4 blur-sm'}`}>
           <Button 
             asChild
-            className="bg-primary text-primary-foreground hover:bg-primary/80 hover:text-primary-foreground text-base h-12 px-8 transition-all duration-200 min-h-[48px]"
+            className="relative bg-gradient-to-r from-[#d8246e]/90 to-[#d8246e]/70 text-white hover:from-[#d8246e] hover:to-[#d8246e]/80 text-base h-12 px-8 transition-all duration-200 min-h-[48px] border-0"
           >
             <a 
               href="https://calendly.com/administration-lumena/30min" 
