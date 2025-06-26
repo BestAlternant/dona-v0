@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 // import TaskBoard from './TaskBoard';
 import { Loader } from 'lucide-react';
-
 const HeroSection = () => {
   const [badgeVisible, setBadgeVisible] = useState(false);
   const [titleVisible, setTitleVisible] = useState(false);
@@ -11,35 +10,22 @@ const HeroSection = () => {
   const [trialTextVisible, setTrialTextVisible] = useState(false);
   const [currentWordIndex, setCurrentWordIndex] = useState(0);
   const [wordVisible, setWordVisible] = useState(true);
-
   const words = ['administrative', 'RH', 'comptable'];
-
   useEffect(() => {
-    const timers = [
-      setTimeout(() => setBadgeVisible(true), 200),
-      setTimeout(() => setTitleVisible(true), 400),
-      setTimeout(() => setDescriptionVisible(true), 600),
-      setTimeout(() => setButtonVisible(true), 800),
-      setTimeout(() => setTrialTextVisible(true), 1000),
-    ];
-
+    const timers = [setTimeout(() => setBadgeVisible(true), 200), setTimeout(() => setTitleVisible(true), 400), setTimeout(() => setDescriptionVisible(true), 600), setTimeout(() => setButtonVisible(true), 800), setTimeout(() => setTrialTextVisible(true), 1000)];
     return () => timers.forEach(timer => clearTimeout(timer));
   }, []);
-
   useEffect(() => {
     const interval = setInterval(() => {
       setWordVisible(false);
       setTimeout(() => {
-        setCurrentWordIndex((prev) => (prev + 1) % words.length);
+        setCurrentWordIndex(prev => (prev + 1) % words.length);
         setWordVisible(true);
       }, 300);
     }, 2500);
-
     return () => clearInterval(interval);
   }, []);
-
-  return (
-    <section className="relative w-full py-20 md:py-32 px-6 md:px-12 flex flex-col items-center justify-center overflow-hidden bg-background min-h-screen">
+  return <section className="relative w-full py-20 md:py-32 px-6 md:px-12 flex flex-col items-center justify-center overflow-hidden bg-background min-h-screen">
       {/* Cosmic grid background only for Hero section */}
       <div className="absolute inset-0 cosmic-grid opacity-50 pointer-events-none"></div>
       
@@ -53,12 +39,7 @@ const HeroSection = () => {
       
       <div className="relative z-10 max-w-4xl text-center space-y-6">
         <div className={`flex justify-center transition-all duration-700 transform ${badgeVisible ? 'opacity-100 translate-y-0 blur-0' : 'opacity-0 -translate-y-4 blur-sm'}`}>
-          <a 
-            href="https://lumena.tech/" 
-            target="_blank" 
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-3 py-1 text-xs font-medium rounded-full bg-muted text-primary hover:bg-muted/80 transition-colors"
-          >
+          <a href="https://lumena.tech/" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-3 py-1 text-xs font-medium rounded-full bg-muted text-primary hover:bg-muted/80 transition-colors">
             <img src="/lovable-uploads/bfec27eb-5bf1-4280-937a-7a8b95a2ee6e.png" alt="Lumena logo" className="h-4 w-auto" />
             by <span className="font-archivo">Lumena Start-up - Studio</span>
           </a>
@@ -69,13 +50,7 @@ const HeroSection = () => {
             <span>L'assistante&nbsp;</span>
             <span className="relative inline-block">
               <span className="absolute inset-0 bg-gradient-to-r from-[#d8246e]/20 to-[#d8246e]/10 rounded-sm"></span>
-              <span 
-                className={`relative px-2 transition-all duration-300 ${
-                  wordVisible 
-                    ? 'opacity-100' 
-                    : 'opacity-0'
-                }`}
-              >
+              <span className={`relative px-2 transition-all duration-300 ${wordVisible ? 'opacity-100' : 'opacity-0'}`}>
                 {words[currentWordIndex]}
               </span>
             </span>
@@ -88,7 +63,7 @@ const HeroSection = () => {
         </p>
         
         <div className={`flex justify-center pt-6 transition-all duration-700 transform ${buttonVisible ? 'opacity-100 translate-y-0 blur-0' : 'opacity-0 -translate-y-4 blur-sm'}`}>
-          <button className="bg-gradient-to-r from-[#d8246e]/30 to-[#d8246e]/30 text-black text-base h-12 px-8 rounded-[4px] font-medium">
+          <button className="bg-gradient-to-r from-[#d8246e]/30 to-[#FFFFFF]/30 text-black text-base h-12 px-8 rounded-[4px] font-medium">
             Prendre un rendez-vous
           </button>
         </div>
@@ -200,9 +175,7 @@ const HeroSection = () => {
             </div>
           </div>
         </div>
-      </div> */}
-    </section>
-  );
+       </div> */}
+    </section>;
 };
-
 export default HeroSection;
