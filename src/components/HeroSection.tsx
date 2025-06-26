@@ -45,7 +45,7 @@ const HeroSection = () => {
         </h1>
         
         <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto text-balance">
-          Un service tout-en-un qui centralise votre gestion administrative, RH et comptable via des outils modernes.
+          Un service tout-en-un qui centralise votre gestion administrative, RH et comptable via une assistante virtuelles externalisés.
         </p>
         
         <div className="flex justify-center pt-6">
