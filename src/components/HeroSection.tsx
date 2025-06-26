@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 // import TaskBoard from './TaskBoard';
@@ -45,7 +46,7 @@ const HeroSection = () => {
         </h1>
         
         <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto text-balance">
-          Streamline your financial workflows with our comprehensive fintech platform. Built for modern businesses who value efficiency, compliance, and scalable growth.
+          Un service tout-en-un, piloté par une experte, qui centralise la gestion administrative, RH et comptable via des outils modernes comme Payfit, Pennylane ou Notion. DONA anticipe, gère et optimise tout ce qui freine votre croissance.
         </p>
         
         <div className="flex justify-center pt-6">
