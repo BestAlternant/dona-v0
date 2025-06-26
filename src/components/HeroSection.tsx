@@ -41,7 +41,10 @@ const HeroSection = () => {
         </div>
         
         <h1 className="text-4xl md:text-6xl lg:text-7xl font-medium tracking-tighter text-balance text-foreground">
-          L'assistante administrative des <span className="text-primary">fondateurs ambitieux</span>
+          L'assistante <span className="relative inline-block">
+            <span className="relative z-10">administrative</span>
+            <span className="absolute inset-x-0 bottom-1 h-3 bg-gradient-to-r from-[#d8246e]/20 to-[#d8246e]/10 rounded-sm -z-10"></span>
+          </span> des <span className="text-primary">fondateurs ambitieux</span>
         </h1>
         
         <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto text-balance">
