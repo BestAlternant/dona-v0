@@ -107,7 +107,8 @@ export default {
 				'gradient-shift': 'gradient-shift 8s ease infinite'
 			},
 			fontFamily: {
-				'inter': ['Inter', 'sans-serif']
+				'inter': ['Inter', 'sans-serif'],
+				'archivo': ['Archivo', 'sans-serif']
 			},
 			letterSpacing: {
 				'tighter': '-0.05em',
