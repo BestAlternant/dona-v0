@@ -7,6 +7,7 @@ const HeroSection = () => {
   const [badgeVisible, setBadgeVisible] = useState(false);
   const [titleVisible, setTitleVisible] = useState(false);
   const [descriptionVisible, setDescriptionVisible] = useState(false);
+  const [buttonVisible, setButtonVisible] = useState(false);
   const [trialTextVisible, setTrialTextVisible] = useState(false);
   const [currentWordIndex, setCurrentWordIndex] = useState(0);
   const [wordVisible, setWordVisible] = useState(true);
@@ -18,7 +19,8 @@ const HeroSection = () => {
       setTimeout(() => setBadgeVisible(true), 200),
       setTimeout(() => setTitleVisible(true), 400),
       setTimeout(() => setDescriptionVisible(true), 600),
-      setTimeout(() => setTrialTextVisible(true), 800),
+      setTimeout(() => setButtonVisible(true), 800),
+      setTimeout(() => setTrialTextVisible(true), 1000),
     ];
 
     return () => timers.forEach(timer => clearTimeout(timer));
@@ -84,6 +86,12 @@ const HeroSection = () => {
         <p className={`text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto text-balance transition-all duration-700 transform ${descriptionVisible ? 'opacity-100 translate-y-0 blur-0' : 'opacity-0 -translate-y-4 blur-sm'}`}>
           Un service tout-en-un qui centralise votre gestion administrative, RH et comptable via une assistante virtuelles externalisés.
         </p>
+        
+        <div className={`flex justify-center pt-6 transition-all duration-700 transform ${buttonVisible ? 'opacity-100 translate-y-0 blur-0' : 'opacity-0 -translate-y-4 blur-sm'}`}>
+          <button className="bg-gradient-to-r from-[#d8246e]/30 to-[#d8246e]/30 text-black text-base h-12 px-8 rounded-[4px] font-medium">
+            Prendre un rendez-vous
+          </button>
+        </div>
         
         <div className={`pt-6 text-sm text-muted-foreground transition-all duration-700 transform ${trialTextVisible ? 'opacity-100 translate-y-0 blur-0' : 'opacity-0 -translate-y-4 blur-sm'}`}>
           No credit card required • Free 14-day trial
