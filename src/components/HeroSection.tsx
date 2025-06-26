@@ -16,7 +16,7 @@ const HeroSection = () => {
   }, []);
 
   return (
-    <section className="relative w-full py-12 md:py-20 px-6 md:px-12 flex flex-col items-center justify-center overflow-hidden bg-background min-h-screen">
+    <section className="relative w-full py-20 md:py-32 px-6 md:px-12 flex flex-col items-center justify-center overflow-hidden bg-background min-h-screen">
       {/* Cosmic grid background only for Hero section */}
       <div className="absolute inset-0 cosmic-grid opacity-50 pointer-events-none"></div>
       
