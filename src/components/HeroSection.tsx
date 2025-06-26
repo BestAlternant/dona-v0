@@ -64,7 +64,7 @@ const HeroSection = () => {
           </a>
         </div>
         
-        <h1 className={`text-4xl md:text-6xl lg:text-7xl font-medium tracking-tighter text-balance text-foreground transition-all duration-700 transform ${titleVisible ? 'opacity-100 translate-y-0 blur-0' : 'opacity-0 -translate-y-4 blur-sm'}`}>
+        <h1 className={`text-4xl md:text-6xl lg:text-7xl font-medium tracking-tighter text-balance text-foreground transition-all duration-700 transform leading-tight ${titleVisible ? 'opacity-100 translate-y-0 blur-0' : 'opacity-0 -translate-y-4 blur-sm'}`}>
           <div className="flex items-baseline justify-center gap-2 flex-wrap">
             <span>L'assistante</span>
             <span className="relative inline-block">
@@ -80,7 +80,7 @@ const HeroSection = () => {
               </span>
             </span>
           </div>
-          <br className="hidden md:inline" /> des <span className="text-primary">fondateurs ambitieux</span>
+          des <span className="text-primary">fondateurs ambitieux</span>
         </h1>
         
         <p className={`text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto text-balance transition-all duration-700 transform ${descriptionVisible ? 'opacity-100 translate-y-0 blur-0' : 'opacity-0 -translate-y-4 blur-sm'}`}>
