@@ -63,7 +63,7 @@ const HeroSection = () => {
         </p>
         
         <div className={`flex justify-center pt-6 transition-all duration-700 transform ${buttonVisible ? 'opacity-100 translate-y-0 blur-0' : 'opacity-0 -translate-y-4 blur-sm'}`}>
-          <button className="bg-gradient-to-r from-[#d8246e]/30 to-[#FFFFFF]/30 text-black text-base h-12 px-8 rounded-[4px] font-medium">
+          <button className="bg-gradient-to-r from-[#d8246e]/30 to-[#d8246e]/10 text-black text-base h-12 px-8 rounded-[4px] font-medium">
             Prendre un rendez-vous
           </button>
         </div>
