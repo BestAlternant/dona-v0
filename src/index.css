@@ -201,4 +201,18 @@
   .column-highlight {
     @apply bg-accent/20 transition-all duration-300;
   }
+
+  /* Slow scrolling animation for client logos */
+  @keyframes scroll-left {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+
+  .animate-scroll-left {
+    animation: scroll-left 30s linear infinite;
+  }
 }
