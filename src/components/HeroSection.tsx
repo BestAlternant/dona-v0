@@ -32,7 +32,7 @@ const HeroSection = () => {
       setTimeout(() => {
         setCurrentWordIndex((prev) => (prev + 1) % words.length);
         setWordVisible(true);
-      }, 300);
+      }, 400);
     }, 2500);
 
     return () => clearInterval(interval);
@@ -67,14 +67,17 @@ const HeroSection = () => {
         <h1 className={`text-4xl md:text-6xl lg:text-7xl font-medium tracking-tighter text-balance text-foreground transition-all duration-700 transform leading-tight ${titleVisible ? 'opacity-100 translate-y-0 blur-0' : 'opacity-0 -translate-y-4 blur-sm'}`}>
           <div className="flex items-baseline justify-center gap-2 flex-wrap">
             <span>L'assistante</span>
-            <span className="relative inline-block">
+            <span className="relative inline-block h-[1.2em] overflow-hidden">
               <span className="absolute inset-0 bg-gradient-to-r from-[#d8246e]/20 to-[#d8246e]/10 rounded-sm"></span>
               <span 
-                className={`relative transition-all duration-300 ${
+                className={`relative block transition-all duration-400 ease-in-out ${
                   wordVisible 
-                    ? 'opacity-100' 
-                    : 'opacity-0'
+                    ? 'opacity-100 translate-y-0 blur-0' 
+                    : 'opacity-0 translate-y-6 blur-sm'
                 }`}
+                style={{
+                  transform: wordVisible ? 'translateY(0%)' : 'translateY(100%)'
+                }}
               >
                 {words[currentWordIndex]}
               </span>
