@@ -66,14 +66,15 @@ const HeroSection = () => {
         
         <h1 className={`text-4xl md:text-6xl lg:text-7xl font-medium tracking-tighter text-balance text-foreground transition-all duration-700 transform ${titleVisible ? 'opacity-100 translate-y-0 blur-0' : 'opacity-0 -translate-y-4 blur-sm'}`}>
           <span className="inline-block">L'assistante</span>{' '}
-          <span className="relative inline-block overflow-hidden h-[1.2em] align-top" style={{ verticalAlign: 'baseline' }}>
-            <span className="absolute inset-0 bg-gradient-to-r from-[#d8246e]/20 to-[#d8246e]/10 rounded-sm top-[0.8em] h-[0.4em]"></span>
+          <span className="relative inline-block overflow-hidden" style={{ height: '1em', verticalAlign: 'baseline' }}>
+            <span className="absolute inset-0 bg-gradient-to-r from-[#d8246e]/20 to-[#d8246e]/10 rounded-sm"></span>
             <span 
               className={`relative z-10 inline-block transition-all duration-300 ${
                 wordVisible 
                   ? 'transform translate-y-0 opacity-100' 
                   : 'transform translate-y-full opacity-0'
               }`}
+              style={{ lineHeight: '1em' }}
             >
               {words[currentWordIndex]}
             </span>
