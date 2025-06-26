@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 // import TaskBoard from './TaskBoard';
@@ -70,7 +71,7 @@ const HeroSection = () => {
             <span className="relative inline-block">
               <span className="absolute inset-0 bg-gradient-to-r from-[#d8246e]/20 to-[#d8246e]/10 rounded-sm"></span>
               <span 
-                className={`relative transition-all duration-300 ${
+                className={`relative px-2 transition-all duration-300 ${
                   wordVisible 
                     ? 'opacity-100' 
                     : 'opacity-0'
