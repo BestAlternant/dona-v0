@@ -70,12 +70,12 @@ const HeroSection = () => {
             <span className="relative inline-block" style={{ width: '420px', height: '1em' }}>
               <span className="absolute inset-0 bg-gradient-to-r from-[#d8246e]/20 to-[#d8246e]/10 rounded-sm" style={{ top: '50%', transform: 'translateY(-50%)' }}></span>
               <span 
-                className={`absolute top-0 left-0 w-full transition-all duration-300 flex items-baseline ${
+                className={`absolute w-full transition-all duration-300 flex items-baseline ${
                   wordVisible 
                     ? 'transform translate-y-0 opacity-100' 
                     : 'transform translate-y-full opacity-0'
                 }`}
-                style={{ lineHeight: '1em', height: '100%' }}
+                style={{ top: '50%', transform: 'translateY(-50%)', lineHeight: '1em', height: '100%' }}
               >
                 <span className="w-full text-left" style={{ lineHeight: 'inherit' }}>
                   {words[currentWordIndex]}
