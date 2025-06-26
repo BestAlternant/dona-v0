@@ -68,7 +68,7 @@ const HeroSection = () => {
           <div className="flex items-baseline justify-center gap-2">
             <span>L'assistante</span>
             <span className="relative inline-block" style={{ width: '420px', height: '1em' }}>
-              <span className="absolute inset-0 bg-gradient-to-r from-[#d8246e]/20 to-[#d8246e]/10 rounded-sm"></span>
+              <span className="absolute inset-0 bg-gradient-to-r from-[#d8246e]/20 to-[#d8246e]/10 rounded-sm" style={{ top: '50%', transform: 'translateY(-50%)' }}></span>
               <span 
                 className={`absolute top-0 left-0 w-full transition-all duration-300 flex items-baseline ${
                   wordVisible 
