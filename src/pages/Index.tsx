@@ -11,8 +11,8 @@ import Footer from '@/components/Footer';
 const Index = () => {
   return (
     <div className="min-h-screen flex flex-col bg-background text-foreground relative overflow-hidden">
-      {/* Global cosmic grid background */}
-      <div className="fixed inset-0 cosmic-grid opacity-30 pointer-events-none"></div>
+      {/* Global cosmic grid background - increased opacity for better visibility */}
+      <div className="fixed inset-0 cosmic-grid opacity-50 pointer-events-none"></div>
       
       <div className="relative z-10">
         <Header />
