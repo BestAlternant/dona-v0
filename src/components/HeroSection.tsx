@@ -29,10 +29,15 @@ const HeroSection = () => {
       
       <div className={`relative z-10 max-w-4xl text-center space-y-6 transition-all duration-700 transform ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
         <div className="flex justify-center">
-          <span className="inline-flex items-center gap-2 px-3 py-1 text-xs font-medium rounded-full bg-muted text-primary">
+          <a 
+            href="https://lumena.tech/" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 px-3 py-1 text-xs font-medium rounded-full bg-muted text-primary hover:bg-muted/80 transition-colors"
+          >
             <img src="/lovable-uploads/bfec27eb-5bf1-4280-937a-7a8b95a2ee6e.png" alt="Lumena logo" className="h-4 w-auto" />
             by <span className="font-archivo">Lumena Start-up - Studio</span>
-          </span>
+          </a>
         </div>
         
         <h1 className="text-4xl md:text-6xl lg:text-7xl font-medium tracking-tighter text-balance text-foreground">
