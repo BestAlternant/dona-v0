@@ -107,9 +107,9 @@ export default {
 				'gradient-shift': 'gradient-shift 8s ease infinite'
 			},
 			fontFamily: {
+				'degular': ['Degular', 'sans-serif'],
 				'inter': ['Inter', 'sans-serif'],
 				'archivo': ['Archivo', 'sans-serif'],
-				'instrument-serif': ['Instrument Serif', 'serif']
 			},
 			letterSpacing: {
 				'tighter': '-0.05em',
