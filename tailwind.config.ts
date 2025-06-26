@@ -108,7 +108,8 @@ export default {
 			},
 			fontFamily: {
 				'inter': ['Inter', 'sans-serif'],
-				'archivo': ['Archivo', 'sans-serif']
+				'archivo': ['Archivo', 'sans-serif'],
+				'instrument-serif': ['Instrument Serif', 'serif']
 			},
 			letterSpacing: {
 				'tighter': '-0.05em',
