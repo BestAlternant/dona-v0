@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 // import TaskBoard from './TaskBoard';
@@ -66,8 +65,8 @@ const HeroSection = () => {
         </div>
         
         <h1 className={`text-4xl md:text-6xl lg:text-7xl font-medium tracking-tighter text-balance text-foreground transition-all duration-700 transform ${titleVisible ? 'opacity-100 translate-y-0 blur-0' : 'opacity-0 -translate-y-4 blur-sm'}`}>
-          <span className="inline-block" style={{ width: '420px' }}>L'assistante</span>{' '}
-          <span className="relative inline-block" style={{ width: '420px', height: '1em' }}>
+          <span className="inline-block align-baseline" style={{ width: '420px' }}>L'assistante</span>{' '}
+          <span className="relative inline-block align-baseline" style={{ width: '420px', height: '1em' }}>
             <span className="absolute inset-0 bg-gradient-to-r from-[#d8246e]/20 to-[#d8246e]/10 rounded-sm" style={{ top: '0.1em', height: '0.8em' }}></span>
             <span 
               className={`absolute top-0 left-0 w-full transition-all duration-300 ${
