@@ -1,6 +1,7 @@
+
 import React, { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
-import TaskBoard from './TaskBoard';
+// import TaskBoard from './TaskBoard';
 import { Loader } from 'lucide-react';
 
 const HeroSection = () => {
@@ -55,10 +56,10 @@ const HeroSection = () => {
         </div>
       </div>
       
-      {/* Task Manager UI integrated in hero section with glassmorphic effect */}
+      {/* Task Manager UI integrated in hero section with glassmorphic effect - HIDDEN */}
+      {/*
       <div className={`w-full max-w-7xl mt-12 z-10 transition-all duration-1000 delay-500 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'}`}>
         <div className="cosmic-glow relative rounded-xl overflow-hidden border border-border backdrop-blur-sm bg-card shadow-lg">
-          {/* Dashboard Header */}
           <div className="bg-card backdrop-blur-md w-full">
             <div className="flex items-center justify-between p-4 border-b border-border">
               <div className="flex items-center gap-4">
@@ -82,9 +83,7 @@ const HeroSection = () => {
               </div>
             </div>
             
-            {/* Dashboard Content */}
             <div className="flex h-[600px] overflow-hidden">
-              {/* Sidebar */}
               <div className="w-64 border-r border-border p-4 space-y-4 hidden md:block bg-card">
                 <div className="space-y-2">
                   <div className="text-xs text-muted-foreground uppercase">Navigation</div>
@@ -127,9 +126,7 @@ const HeroSection = () => {
                 </div>
               </div>
               
-              {/* Main Content */}
               <div className="flex-1 p-4 bg-background overflow-hidden">
-                {/* Board Header */}
                 <div className="flex items-center justify-between mb-6 min-w-0">
                   <div className="flex items-center gap-2 flex-shrink-0">
                     <h3 className="font-medium text-foreground">Transactions</h3>
@@ -155,7 +152,6 @@ const HeroSection = () => {
                   </div>
                 </div>
                 
-                {/* Kanban Board */}
                 <div className="overflow-hidden">
                   <TaskBoard />
                 </div>
@@ -164,6 +160,7 @@ const HeroSection = () => {
           </div>
         </div>
       </div>
+      */}
     </section>
   );
 };
