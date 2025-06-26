@@ -1,5 +1,3 @@
-
-
 import React, { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 // import TaskBoard from './TaskBoard';
@@ -32,9 +30,8 @@ const HeroSection = () => {
       <div className={`relative z-10 max-w-4xl text-center space-y-6 transition-all duration-700 transform ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
         <div className="flex justify-center">
           <span className="inline-flex items-center gap-2 px-3 py-1 text-xs font-medium rounded-full bg-muted text-primary">
-            <span className="flex h-2 w-2 rounded-full bg-primary"></span>
-            Launching new payment features
-            <Loader className="h-3 w-3 animate-spin text-primary" />
+            <img src="/lovable-uploads/bfec27eb-5bf1-4280-937a-7a8b95a2ee6e.png" alt="Lumena logo" className="h-3 w-3" />
+            Backed by Lumena Start-up - Studio
           </span>
         </div>
         
@@ -165,4 +162,3 @@ const HeroSection = () => {
 };
 
 export default HeroSection;
-
