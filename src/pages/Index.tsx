@@ -12,7 +12,7 @@ const Index = () => {
   return (
     <div className="min-h-screen flex flex-col bg-background text-foreground relative overflow-hidden">
       {/* Cosmic grid background for header and hero section only */}
-      <div className="absolute top-0 left-0 right-0 h-screen cosmic-grid opacity-50 pointer-events-none"></div>
+      <div className="absolute top-0 left-0 right-0 h-screen cosmic-grid opacity-30 pointer-events-none"></div>
       
       <div className="relative z-10">
         <Header />
