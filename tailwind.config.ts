@@ -1,4 +1,3 @@
-
 import type { Config } from "tailwindcss";
 
 export default {
@@ -101,6 +100,10 @@ export default {
 				'scroll-left': {
 					'0%': { transform: 'translateX(0)' },
 					'100%': { transform: 'translateX(-50%)' }
+				},
+				'scroll-infinite': {
+					'0%': { transform: 'translateX(0)' },
+					'100%': { transform: 'translateX(-33.333%)' }
 				}
 			},
 			animation: {
@@ -109,7 +112,8 @@ export default {
 				'float': 'float 6s ease-in-out infinite',
 				'pulse-slow': 'pulse-slow 4s ease-in-out infinite',
 				'gradient-shift': 'gradient-shift 8s ease infinite',
-				'scroll-left': 'scroll-left 30s linear infinite'
+				'scroll-left': 'scroll-left 30s linear infinite',
+				'scroll-infinite': 'scroll-infinite 45s linear infinite'
 			},
 			fontFamily: {
 				'degular': ['Degular', 'sans-serif'],

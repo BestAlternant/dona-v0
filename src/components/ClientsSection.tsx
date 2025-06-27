@@ -74,14 +74,20 @@ const ClientsSection = () => {
           </p>
         </div>
         
-        {/* Scrolling logos container */}
+        {/* Scrolling logos container with gradient overlays */}
         <div className="relative overflow-hidden">
-          <div className="flex animate-scroll-left items-center w-fit">
+          {/* Left gradient overlay */}
+          <div className="absolute left-0 top-0 bottom-0 w-24 bg-gradient-to-r from-background to-transparent z-10 pointer-events-none"></div>
+          
+          {/* Right gradient overlay */}
+          <div className="absolute right-0 top-0 bottom-0 w-24 bg-gradient-to-l from-background to-transparent z-10 pointer-events-none"></div>
+          
+          <div className="flex animate-scroll-infinite items-center">
             {/* First set of logos */}
             {clients.map((client) => (
               <div 
                 key={`first-${client.id}`}
-                className="flex-shrink-0 flex items-center justify-center mx-8"
+                className="flex-shrink-0 flex items-center justify-center mx-16"
               >
                 <img
                   src={client.logo_url}
@@ -95,7 +101,21 @@ const ClientsSection = () => {
             {clients.map((client) => (
               <div 
                 key={`second-${client.id}`}
-                className="flex-shrink-0 flex items-center justify-center mx-8"
+                className="flex-shrink-0 flex items-center justify-center mx-16"
+              >
+                <img
+                  src={client.logo_url}
+                  alt={client.name}
+                  className="h-12 w-auto object-contain filter grayscale opacity-60 hover:opacity-80 transition-opacity duration-300"
+                  style={{ maxWidth: '120px' }}
+                />
+              </div>
+            ))}
+            {/* Third set for extra smooth loop */}
+            {clients.map((client) => (
+              <div 
+                key={`third-${client.id}`}
+                className="flex-shrink-0 flex items-center justify-center mx-16"
               >
                 <img
                   src={client.logo_url}
