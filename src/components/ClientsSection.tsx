@@ -4,8 +4,8 @@ import React from 'react';
 const ClientsSection = () => {
   const clients = [
     {
-      name: "TechCorp",
-      logo: "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=200&h=100&fit=crop&auto=format"
+      name: "BlackTicket",
+      logo: "/lovable-uploads/280f4554-1e63-47ee-8a46-29676ebd8e19.png"
     },
     {
       name: "FinanceFlow",
