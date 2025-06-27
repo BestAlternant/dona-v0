@@ -1,4 +1,3 @@
-
 import React from 'react';
 
 const ClientsSection = () => {
@@ -6,6 +5,10 @@ const ClientsSection = () => {
     {
       name: "BlackTicket",
       logo: "/lovable-uploads/280f4554-1e63-47ee-8a46-29676ebd8e19.png"
+    },
+    {
+      name: "Delmonicos",
+      logo: "/lovable-uploads/46ce502e-1f55-4f46-9025-472b00985c7c.png"
     },
     {
       name: "FinanceFlow",
