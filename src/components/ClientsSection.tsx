@@ -11,6 +11,10 @@ const ClientsSection = () => {
       logo: "/lovable-uploads/46ce502e-1f55-4f46-9025-472b00985c7c.png"
     },
     {
+      name: "Yuzu",
+      logo: "/lovable-uploads/5aa305e0-0197-4551-96bf-4008c7d49a88.png"
+    },
+    {
       name: "FinanceFlow",
       logo: "https://images.unsplash.com/photo-1549924231-f129b911e442?w=200&h=100&fit=crop&auto=format"
     },
