@@ -76,30 +76,32 @@ const ClientsSection = () => {
         
         {/* Scrolling logos container */}
         <div className="relative overflow-hidden">
-          <div className="flex animate-scroll-left space-x-12 w-fit">
+          <div className="flex animate-scroll-left items-center w-fit">
             {/* First set of logos */}
-            {clients.map((client, index) => (
+            {clients.map((client) => (
               <div 
                 key={`first-${client.id}`}
-                className="flex-shrink-0 flex items-center justify-center h-16 w-32 grayscale opacity-60 hover:opacity-80 transition-opacity duration-300"
+                className="flex-shrink-0 flex items-center justify-center mx-8"
               >
                 <img
                   src={client.logo_url}
                   alt={client.name}
-                  className="max-h-12 max-w-full object-contain filter grayscale"
+                  className="h-12 w-auto object-contain filter grayscale opacity-60 hover:opacity-80 transition-opacity duration-300"
+                  style={{ maxWidth: '120px' }}
                 />
               </div>
             ))}
             {/* Duplicate set for seamless loop */}
-            {clients.map((client, index) => (
+            {clients.map((client) => (
               <div 
                 key={`second-${client.id}`}
-                className="flex-shrink-0 flex items-center justify-center h-16 w-32 grayscale opacity-60 hover:opacity-80 transition-opacity duration-300"
+                className="flex-shrink-0 flex items-center justify-center mx-8"
               >
                 <img
                   src={client.logo_url}
                   alt={client.name}
-                  className="max-h-12 max-w-full object-contain filter grayscale"
+                  className="h-12 w-auto object-contain filter grayscale opacity-60 hover:opacity-80 transition-opacity duration-300"
+                  style={{ maxWidth: '120px' }}
                 />
               </div>
             ))}
